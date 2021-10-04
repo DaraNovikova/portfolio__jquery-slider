@@ -1,0 +1,147 @@
+.carousel {
+    position: relative;
+}
+
+.slides {
+    position: relative;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+.slides__item {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+
+.slides__item:nth-of-type(1) {
+    background-image: url(../img/slide1.jpg);
+}
+
+.slides__item:nth-of-type(2) {
+    background-image: url(../img/slide2.jpg);
+}
+
+.slides__item:nth-of-type(3) {
+    background-image: url(../img/slide3.jpg);
+}
+
+.slides__item:nth-of-type(4) {
+    background-image: url(../img/slide4.jpg);
+}
+
+.slides__item:nth-of-type(5) {
+    background-image: url(../img/slide5.jpg);
+}
+
+.indicators__item.active {
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.6) ;
+    color: #ffffff;
+
+}
+
+.indicators__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    margin: 10px;
+    color: transparent;
+    font-size: 18px;
+    border: 3px solid #b3b2b2;
+    box-shadow: 0px 0px 5px 2px rgba(179, 178, 178, 0.4) ;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+
+.indicators {
+    position: absolute;
+    bottom: 5%;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+}
+
+.indicators__pause {
+    font-size: 32px;
+    z-index: 4;
+
+}
+
+.indicators__pause i {
+    color:#c9c3c3;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 1s;
+}
+
+.indicators__pause i:hover,
+.indicators__pause i:focus {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+.controls__item {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    font-size: 50px;
+    color:  #c9c3c3;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.controls__prev {
+    left: 0;
+}
+
+.controls__next {
+    right: 0;
+    
+}
+
+.controls__item:hover,
+.controls__item:focus {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+.controls__prev:hover,
+.controls__prev:focus {
+    background: linear-gradient( to right, rgba(0, 0, 0, 0.7) 0, transparent 100%);
+}
+
+
+.controls__next:hover, 
+.controls__next:focus {
+    background: linear-gradient( to left, rgba(0, 0, 0, 0.7) 0, transparent 100%);
+}
